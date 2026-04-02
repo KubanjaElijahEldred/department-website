@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { campusBuildingImage } from '../assets/images'
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,10 @@ const Login = () => {
     <div className="min-h-screen bg-secondary-50 font-sans flex flex-col justify-center">
       {/* Page Header */}
       <section className="bg-primary-900 py-16 border-b-8 border-accent-500 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/src/assets/images/campus-building.jpg')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+        <div
+          className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay"
+          style={{ backgroundImage: `url(${campusBuildingImage})` }}
+        ></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>

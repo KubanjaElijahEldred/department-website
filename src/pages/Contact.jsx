@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { campusBuildingImage } from '../assets/images'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -82,7 +83,10 @@ const Contact = () => {
     <div className="min-h-screen bg-secondary-50">
       {/* Header */}
       <section className="bg-primary-900 py-20 border-b-8 border-accent-500 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/src/assets/images/campus-building.jpg')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+        <div
+          className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay"
+          style={{ backgroundImage: `url(${campusBuildingImage})` }}
+        ></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <span className="inline-block px-4 py-1 bg-accent-500 text-white font-bold uppercase tracking-wider rounded-full text-sm mb-6 shadow-md">
             Get in Touch

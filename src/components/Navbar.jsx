@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { departmentLogoImage } from '../assets/images'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -26,7 +27,7 @@ const Navbar = () => {
           <div className="flex items-center relative w-24 sm:w-32 transition-all">
             <Link to="/" className="group absolute top-1 sm:-top-1 z-[90]">
               <img 
-                src="/src/assets/images/imagecopy4.png" 
+                src={departmentLogoImage} 
                 alt="Bugema University logo" 
                 className="h-24 w-24 sm:h-32 sm:w-32 rounded-full border-4 border-white shadow-[0_10px_25px_rgba(15,53,92,0.2)] bg-white object-contain transition-transform group-hover:scale-105"
               />

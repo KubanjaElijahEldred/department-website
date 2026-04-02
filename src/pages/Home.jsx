@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import useTypewriter from '../hooks/useTypewriter'
+import { aboutHeroImage, homeHeroImage } from '../assets/images'
 
 const Home = () => {
   const typewriterText = useTypewriter([
@@ -49,7 +50,7 @@ const Home = () => {
            
            {/* Inner Image Background (Clear) */}
            <div className="absolute inset-2 lg:inset-4 rounded-full overflow-hidden z-0 shadow-inner">
-              <img src="/src/assets/images/image copy 2.png" alt="Campus" className="w-full h-full object-cover object-center" />
+              <img src={homeHeroImage} alt="Campus" className="w-full h-full object-cover object-center" />
            </div>
 
            {/* The thick outer ring */}
@@ -145,7 +146,7 @@ const Home = () => {
                <div className="relative">
                   {/* Image container styled as a rounded offset shape */}
                   <div className="relative z-10 rounded-tr-[4rem] rounded-bl-[4rem] border-4 border-primary-700 overflow-hidden shadow-2xl bg-white">
-                     <img src="/src/assets/images/about-hero.jpg.jpeg" alt="Library" className="w-full aspect-[4/3] object-cover opacity-90 mix-blend-multiply" />
+                     <img src={aboutHeroImage} alt="Library" className="w-full aspect-[4/3] object-cover opacity-90 mix-blend-multiply" />
                   </div>
                   {/* Decorative swoop behind image */}
                   <div className="absolute -top-10 -right-10 w-full h-full rounded-tr-[5rem] rounded-bl-[5rem] bg-gradient-to-tr from-primary-800 to-primary-600 z-0"></div>

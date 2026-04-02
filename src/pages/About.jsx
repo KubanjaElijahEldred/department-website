@@ -1,4 +1,14 @@
 import { Link } from 'react-router-dom'
+import {
+  aboutHeroImage,
+  alumniLogoImage,
+  balagaddeImage,
+  campusBuildingImage,
+  deanImage,
+  headOfDepartmentImage,
+  lecturerImage,
+  secretaryImage,
+} from '../assets/images'
 
 const About = () => {
   const staffMembers = [
@@ -6,42 +16,42 @@ const About = () => {
       id: 1,
       name: 'Dr. Nagwovuma Magerate',
       title: 'Dean of the Faculty',
-      image: '/src/assets/images/dean.png',
+      image: deanImage,
       bio: 'Visionary leader overseeing the Faculty\'s academic programs and strategic direction to foster computing innovation.'
     },
     {
       id: 2,
       name: 'Mr.Sewankambo Erma',
       title: 'Head of Department',
-      image: '/src/assets/images/image.png',
+      image: headOfDepartmentImage,
       bio: 'Leading the IT Department with over 15 years of experience in computer science education and research.'
     },
     {
       id: 3,
       name: 'Prof.Assoc. Dr. Balagadde',
       title: 'Senior Lecturer',
-      image: '/src/assets/images/balagadde.jpeg',
+      image: balagaddeImage,
       bio: 'Specializing in software engineering and database systems with extensive industry experience.'
     },
     {
       id: 4,
       name: 'Mr. Albert Walusimbi',
       title: 'senior Lecturer',
-      image: '/src/assets/images/image copy.png',
+      image: lecturerImage,
       bio: 'Expert in network security and information systems with a focus on practical applications.'
     },
     {
       id: 5,
       name: 'Ms. David Kitumba',
       title: 'Lecturer',
-      image: '/src/assets/images/imagecopy3.png',
+      image: alumniLogoImage,
       bio: 'Passionate about cloud computing and data analytics, preparing students for modern global tech challenges.'
     },
     {
       id: 6,
       name: 'Mrs. Nalwoga Grace',
       title: 'Secretary',
-      image: '/src/assets/images/ww.png',
+      image: secretaryImage,
       bio: 'Managing department administration and providing excellent, reliable support services to all students and faculty members.'
     }
   ]
@@ -53,7 +63,7 @@ const About = () => {
         {/* Background Image with Blur */}
         <div className="absolute inset-0">
           <img 
-            src="/src/assets/images/about-hero.jpg.jpeg" 
+            src={aboutHeroImage} 
             alt="About Hero Background" 
             className="w-full h-full object-cover"
           />
@@ -229,7 +239,10 @@ const About = () => {
 
       {/* Department Stats */}
       <section className="py-20 bg-primary-900 relative">
-        <div className="absolute inset-0 bg-[url('/src/assets/images/campus-building.jpg')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
+        <div
+          className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay"
+          style={{ backgroundImage: `url(${campusBuildingImage})` }}
+        ></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <h2 className="text-4xl font-black text-center text-white mb-16 uppercase tracking-wide">
               Department by Numbers

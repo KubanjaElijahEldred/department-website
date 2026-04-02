@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { departmentLogoImage } from '../assets/images'
 
 const Admissions = () => {
   const [formData, setFormData] = useState({
@@ -61,7 +62,7 @@ const Admissions = () => {
                <div className="w-32 h-32 md:w-48 md:h-48 rounded-full flex items-center justify-center p-4 mb-6 z-20">
                   {/* Using the white border style around the logo to pop against the blue */}
                   <div className="absolute inset-4 md:inset-8 border-[6px] border-white/20 rounded-xl" style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}></div>
-                  <img src="/src/assets/images/imagecopy4.png" alt="Logo" className="w-24 h-24 md:w-36 md:h-36 object-contain filter drop-shadow-xl z-10 bg-white rounded-full p-2 border-4 border-white" />
+                  <img src={departmentLogoImage} alt="Logo" className="w-24 h-24 md:w-36 md:h-36 object-contain filter drop-shadow-xl z-10 bg-white rounded-full p-2 border-4 border-white" />
                </div>
                <div className="text-center z-20">
                  <h2 className="text-4xl md:text-5xl font-black tracking-widest uppercase drop-shadow-md text-white">BUGEMA</h2>

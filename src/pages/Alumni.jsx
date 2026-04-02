@@ -1,4 +1,11 @@
 import { Link } from 'react-router-dom'
+import {
+  aboutHeroImage,
+  alumniLogoImage,
+  campusBuildingImage,
+  staffHeroAltImage,
+  staffHeroImage,
+} from '../assets/images'
 
 const Alumni = () => {
   // We use inline custom colors to perfectly match the mockup palette
@@ -12,13 +19,13 @@ const Alumni = () => {
   };
 
   const portraits = [
-    '/src/assets/images/staff-hero.jpg.jpeg',
-    '/src/assets/images/staff-hero.jpg copy.jpeg',
-    '/src/assets/images/imagecopy3.png',
-    '/src/assets/images/staff-hero.jpg.jpeg', // reusing for grid fill
-    '/src/assets/images/staff-hero.jpg copy.jpeg',
-    '/src/assets/images/imagecopy3.png',
-    '/src/assets/images/staff-hero.jpg.jpeg'
+    staffHeroImage,
+    staffHeroAltImage,
+    alumniLogoImage,
+    staffHeroImage, // reusing for grid fill
+    staffHeroAltImage,
+    alumniLogoImage,
+    staffHeroImage
   ];
 
   return (
@@ -30,7 +37,7 @@ const Alumni = () => {
         {/* Alumni Logo Area (Top Left) */}
         <div className="mb-6 sm:mb-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <img src="/src/assets/images/imagecopy3.png" alt="Bugema Logo" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+            <img src={alumniLogoImage} alt="Bugema Logo" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
             <div className="flex-1">
               <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold leading-none text-primary-900">Alumni</h1>
               <p className="font-sans font-bold text-[10px] sm:text-xs tracking-[0.2em] text-primary-900">ASSOCIATION</p>
@@ -46,7 +53,7 @@ const Alumni = () => {
         <div className="relative w-full flex justify-end">
           {/* Main Hero Background Image (Right aligned) */}
           <div className="w-full md:w-4/5 h-[300px] sm:h-[400px] md:h-[500px] relative overflow-hidden">
-             <img src="/src/assets/images/campus-building.jpg" alt="Graduates" className="w-full h-full object-cover object-top" />
+             <img src={campusBuildingImage} alt="Graduates" className="w-full h-full object-cover object-top" />
           </div>
 
           {/* Overlapping Dark Box */}
@@ -120,7 +127,7 @@ const Alumni = () => {
         {/* Image/Video block */}
         <div className="flex flex-col">
           <div className="relative w-full h-40 bg-gray-300 mb-4 overflow-hidden group cursor-pointer">
-            <img src="/src/assets/images/about-hero.jpg.jpeg" alt="Video thumbnail" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" />
+            <img src={aboutHeroImage} alt="Video thumbnail" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" />
             <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white flex items-center justify-center rounded-sm shadow-md group-hover:bg-[#f0f0f0]`}>
               <svg className={`w-5 h-5 ${theme.textDark} ml-1`} fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z" /></svg>
             </div>
@@ -204,7 +211,7 @@ const Alumni = () => {
       <footer className={`${theme.bgLighter} border-t border-primary-200 py-8 sm:py-12`}>
          <div className="w-full max-w-6xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row justify-between items-start gap-8">
             <div className="flex flex-col justify-center items-center lg:items-start">
-               <img src="/src/assets/images/imagecopy3.png" alt="Bugema Logo" className="w-10 h-10 sm:w-12 sm:h-12 mb-2 object-contain opacity-50 grayscale" />
+               <img src={alumniLogoImage} alt="Bugema Logo" className="w-10 h-10 sm:w-12 sm:h-12 mb-2 object-contain opacity-50 grayscale" />
                <h1 className="font-serif text-lg sm:text-xl font-bold leading-none text-primary-900">Alumni</h1>
                <p className="font-sans font-bold text-[8px] sm:text-[10px] tracking-[0.2em] text-primary-900">ASSOCIATION</p>
             </div>
