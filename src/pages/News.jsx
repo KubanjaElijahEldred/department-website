@@ -1,10 +1,4 @@
 import { Link } from 'react-router-dom'
-import {
-  aboutHeroImage,
-  campusBuildingImage,
-  programsBackgroundImage,
-  staffHeroImage,
-} from '../assets/images'
 
 const News = () => {
   const newsItems = [
@@ -13,28 +7,28 @@ const News = () => {
       title: 'Campus Building',
       date: 'March 10, 2026',
       excerpt: 'Explore the recent developments and upgrades to our main campus building infrastructure.',
-      image: campusBuildingImage
+      image: '/src/assets/images/campus-building.jpg'
     },
     {
       id: 2,
       title: 'Programs Background',
       date: 'March 15, 2026',
       excerpt: 'A look into the background of our core academic programs and curriculum enhancements.',
-      image: programsBackgroundImage
+      image: '/src/assets/images/programs-bg.jpg'
     },
     {
       id: 3,
       title: 'Staff Excellence',
       date: 'March 20, 2026',
       excerpt: 'Honoring our dedicated staff members who go above and beyond for student success.',
-      image: staffHeroImage
+      image: '/src/assets/images/staff-hero.jpg.jpeg'
     },
     {
       id: 4,
       title: 'Department Innovation',
       date: 'March 25, 2026',
       excerpt: 'Discover the journey and vision behind our newly redesigned department platform.',
-      image: aboutHeroImage
+      image: '/src/assets/images/about-hero.jpg.jpeg'
     }
   ]
 
